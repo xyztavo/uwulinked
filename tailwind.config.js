@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'custom': '0 0 10px rgba(127, 127, 127, 0.5), inset 0 0 10px rgba(127, 127, 127, 0.5)',
+        'custom': '0 0 25px rgba(252, 154, 238, 0.2), inset 0 0 1px rgba(127, 127, 127, 0.5)',
       },
     },
   },

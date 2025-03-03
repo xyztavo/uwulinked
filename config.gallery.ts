@@ -3,10 +3,10 @@ import { Album } from "./types/config.gallery";
 const gallery: { albums: Album[] } = {
   albums: [
     {
-      title: "me",
-      route: "me",
+      title: "kuromi <3",
+      route: "kuromi",
       coverImageSrc:
-        "/assets/me/me-cover.png",
+        "/assets/kuromi/kuromi-album.png",
       posts: [
         {
           title: "1",

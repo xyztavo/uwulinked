@@ -177,7 +177,8 @@ export default function Linktree() {
                                 content={data.data.discord_status}
                                 placement="bottom-right"
                                 size="lg"
-                                variant="solid"
+                                className="text-primary"
+                                variant="faded"
                             >
                                 <Tooltip
                                     color="primary"
@@ -242,7 +243,8 @@ export default function Linktree() {
                     {config.options.gallery && (
                         <Button
                             isIconOnly
-                            className="shadow-custom hover:text-white bg-transparent hover:bg-primary"
+                            className="shadow-custom hover:text-white hover:bg-primary"
+                            variant="faded"
                             onPress={onOpen}
                         >
                             <Camera />
@@ -251,47 +253,47 @@ export default function Linktree() {
                     <ThemeSwitch />
                 </div>
                 {/* albuns modal */}
-                <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-                    <ModalContent>
-                        {(onClose) => (
-                            <>
-                                <ModalHeader className="flex flex-col gap-1">
-                                    My Albums
-                                </ModalHeader>
-                                <ModalBody className="flex flex-row items-center justify-center flex-wrap">
-                                    {gallery.albums.map((album, i) => (
-                                        <motion.a
-                                            key={i}
-                                            className="flex flex-col items-center justify-center"
-                                            href={album.route}
-                                            whileHover={{ scale: 1.1, zIndex: 10 }}
-                                        >
-                                            <img
-                                                alt="album cover"
-                                                className="w-32 h-32 rounded-t-md border-2 border-foreground-300"
-                                                src={album.coverImageSrc}
-                                            />
-                                            <Button
-                                                className="w-full rounded-b-lg font-normal"
-                                                radius="none"
+                <Modal isOpen={isOpen} onOpenChange={onOpenChange} >
+                        <ModalContent >
+                            {(onClose) => (
+                                <>
+                                    <ModalHeader className="flex flex-col gap-1">
+                                        My Albums
+                                    </ModalHeader>
+                                    <ModalBody className="flex flex-row items-center justify-center flex-wrap">
+                                        {gallery.albums.map((album, i) => (
+                                            <motion.a
+                                                key={i}
+                                                className="flex flex-col items-center justify-center rounded-lg  border-2 border-primary shadow-custom"
+                                                href={album.route}
+                                                whileHover={{ scale: 1.1, zIndex: 10 }}
                                             >
-                                                {album.title}
-                                            </Button>
-                                        </motion.a>
-                                    ))}
-                                </ModalBody>
-                                <ModalFooter>
-                                    <Button
-                                        className="text-white"
-                                        color="primary"
-                                        onPress={onClose}
-                                    >
-                                        Close
-                                    </Button>
-                                </ModalFooter>
-                            </>
-                        )}
-                    </ModalContent>
+                                                <img
+                                                    alt="album cover"
+                                                    className="w-32 h-32 rounded-t-md"
+                                                    src={album.coverImageSrc}
+                                                />
+                                                <Button
+                                                    className="w-full rounded-b-lg font-normal border-t-2 border-primary"
+                                                    radius="none"
+                                                >
+                                                    {album.title}
+                                                </Button>
+                                            </motion.a>
+                                        ))}
+                                    </ModalBody>
+                                    <ModalFooter>
+                                        <Button
+                                            className="text-white"
+                                            color="primary"
+                                            onPress={onClose}
+                                        >
+                                            Close
+                                        </Button>
+                                    </ModalFooter>
+                                </>
+                            )}
+                        </ModalContent>
                 </Modal>
                 <div className="flex flex-col gap-6">
                     {config.buttons.map((button) => (
@@ -299,7 +301,7 @@ export default function Linktree() {
                             key={button.link}
                             className="hover:text-white hover:bg-primary w-64 shadow-custom"
                             size="lg"
-                            variant="bordered"
+                            variant="faded"
                             onPress={() => window.open(button.link, "_blank")}
                         >
                             {button.title}
@@ -312,6 +314,7 @@ export default function Linktree() {
                             isIconOnly
                             className="text-foreground hover:text-white bg-transparent shadow-custom hover:bg-slate-800"
                             size="sm"
+                            variant="faded"
                             onPress={() => window.open(config.githubLink, "_blank")}
                         >
                             <Github />
@@ -320,8 +323,9 @@ export default function Linktree() {
                     {config.instagramLink && (
                         <Button
                             isIconOnly
-                            className="relative text-foreground bg-transparent hover:text-white shadow-custom overflow-hidden rounded-md transition-all duration-300 group"
+                            className="relative text-foreground hover:text-white shadow-custom overflow-hidden rounded-md transition-all duration-300 group"
                             size="sm"
+                            variant="faded"
                             onPress={() => window.open(config.instagramLink, "_blank")}
                         >
                             {/* Gradient background */}
@@ -335,8 +339,9 @@ export default function Linktree() {
                     {config.discordLink && (
                         <Button
                             isIconOnly
-                            className="text-foreground hover:text-white bg-transparent shadow-custom hover:bg-[#5865F2]"
+                            className="text-foreground hover:text-white shadow-custom hover:bg-[#5865F2]"
                             size="sm"
+                            variant="faded"
                             onPress={() => window.open(config.discordLink, "_blank")}
                         >
                             <DiscordIcon />
@@ -345,8 +350,9 @@ export default function Linktree() {
                     {config.linkedInLink && (
                         <Button
                             isIconOnly
-                            className="text-foreground hover:text-white bg-transparent shadow-custom hover:bg-[#0e76a8]"
+                            className="text-foreground hover:text-white shadow-custom hover:bg-[#0e76a8]"
                             size="sm"
+                            variant="faded"
                             onPress={() => window.open(config.linkedInLink, "_blank")}
                         >
                             <Linkedin />
@@ -355,8 +361,9 @@ export default function Linktree() {
                     {config.ytMusicLink && (
                         <Button
                             isIconOnly
-                            className="text-foreground hover:text-white bg-transparent shadow-custom hover:bg-[#da1a1a]"
+                            className="text-foreground hover:text-white shadow-custom hover:bg-[#da1a1a]"
                             size="sm"
+                            variant="faded"
                             onPress={() => window.open(config.ytMusicLink, "_blank")}
                         >
                             <Music />
@@ -365,8 +372,9 @@ export default function Linktree() {
                     {config.spotifyLink && (
                         <Button
                             isIconOnly
-                            className="text-foreground hover:text-white bg-transparent shadow-custom hover:bg-[#1DB954]"
+                            className="text-foreground hover:text-white shadow-custom hover:bg-[#1DB954]"
                             size="sm"
+                            variant="faded"
                             onPress={() => window.open(config.spotifyLink, "_blank")}
                         >
                             <SpotifyIcon />
@@ -375,8 +383,9 @@ export default function Linktree() {
                     {config.youtubeLink && (
                         <Button
                             isIconOnly
-                            className="text-foreground hover:text-white bg-transparent shadow-custom hover:bg-[#c4302b]"
+                            className="text-foreground hover:text-white shadow-custom hover:bg-[#c4302b]"
                             size="sm"
+                            variant="faded"
                             onPress={() => window.open(config.youtubeLink, "_blank")}
                         >
                             <YoutubeIcon />

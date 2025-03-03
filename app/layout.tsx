@@ -40,7 +40,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col min-h-screen">
             {/* Background */}
-            <div className="absolute inset-0  bg-[url('/assets/vectors/kitty.png')] dark:bg-[url('/assets/vectors/kuromi.png')] bg-repeat bg-[length:300px_300px] opacity-5 pointer-events-none z-0" />
+            <div className="absolute inset-0  bg-[url('/assets/vectors/kitty.png')] dark:bg-[url('/assets/vectors/kuromi.png')] bg-repeat bg-[length:300px_300px] opacity-15 pointer-events-none z-0" />
               {/* Main Content */}
               <main
                 className={
