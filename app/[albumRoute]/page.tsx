@@ -29,28 +29,31 @@ export default function Album() {
 
   return (
     <div className="flex flex-col gap-4 z-40">
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent>
+      {/* albuns modal */}
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} >
+        <ModalContent >
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col">My Albums</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">
+                My Albums
+              </ModalHeader>
               <ModalBody className="flex flex-row items-center justify-center flex-wrap">
-                {gallery.albums.map((album, i) => (
+                {gallery.albums.map((album) => (
                   <motion.a
-                    key={i}
-                    className="flex flex-col items-center justify-center"
+                    key={album.route}
+                    className="flex flex-col items-center justify-center rounded-lg  border-2 border-primary shadow-custom"
                     href={album.route}
-                    whileHover={{ scale: 1.3, zIndex: 10 }}
+                    whileHover={{ scale: 1.1, zIndex: 10 }}
                   >
-                    <Image
+                    <img
                       alt="album cover"
-                      className="rounded-t-md border-2 border-foreground-300"
-                      width={128}
-                      height={128}
+                      className="w-32 h-32 rounded-t-md"
                       src={album.coverImageSrc}
-                      priority
                     />
-                    <Button className="w-full rounded-b-lg" radius="none">
+                    <Button
+                      className="w-full bg-foreground-100 rounded-b-lg font-normal border-t-2 border-primary"
+                      radius="none"
+                    >
                       {album.title}
                     </Button>
                   </motion.a>
@@ -70,11 +73,16 @@ export default function Album() {
         </ModalContent>
       </Modal>
       <div className="flex flex-row gap-6">
-        <Button isIconOnly onPress={() => window.location.replace("/")} className="bg-transparent hover:bg-primary shadow-custom">
+        <Button isIconOnly onPress={() => window.location.replace("/")}
+          variant="faded"
+          className="hover:bg-primary shadow-custom">
           <ArrowLeftCircleIcon />
         </Button>
         <ThemeSwitch />
-        <Button isIconOnly color="secondary" className="bg-transparent hover:bg-primary shadow-custom text-foreground" onPress={onOpen}>
+        <Button isIconOnly color="secondary"
+          variant="faded"
+
+          className="hover:bg-primary shadow-custom text-foreground" onPress={onOpen}>
           <Camera />
         </Button>
       </div>
@@ -96,7 +104,7 @@ export default function Album() {
               return (
                 <motion.div
                   key={i}
-                  className="flex flex-col items-center justify-center cursor-pointer"
+                  className="flex flex-col items-center justify-center cursor-pointer shadow-custom rounded-lg"
                   whileHover={{ scale: 1.1 }}
                   onClick={onImageOpen}
                 >
@@ -121,6 +129,7 @@ export default function Album() {
                               <Image
                                 alt={"image of " + image.title}
                                 src={image.src}
+                                className="object-cover"
                                 width={240}
                                 height={240}
                                 priority
@@ -140,11 +149,9 @@ export default function Album() {
                       )}
                     </ModalContent>
                   </Modal>
-                  <Image alt=""
-                    width={240}
-                    height={240}
-                    className="rounded-md " src={image.src} priority />
-                  <h1 className="mt-[-1.5rem] rounded-md text-white font-bold bg-gradient-to-t from-black to-transparent w-full text-center">
+                  <img alt=""
+                    className="w-52 h-52 rounded-md object-cover" src={image.src} />
+                  <h1 className="mt-[-1.5rem] rounded-md text-white font-bold  w-full text-center">
                     {image.title}
                   </h1>
                   {image.videoSrc && (

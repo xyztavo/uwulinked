@@ -261,9 +261,9 @@ export default function Linktree() {
                                         My Albums
                                     </ModalHeader>
                                     <ModalBody className="flex flex-row items-center justify-center flex-wrap">
-                                        {gallery.albums.map((album, i) => (
+                                        {gallery.albums.map((album) => (
                                             <motion.a
-                                                key={i}
+                                                key={album.route}
                                                 className="flex flex-col items-center justify-center rounded-lg  border-2 border-primary shadow-custom"
                                                 href={album.route}
                                                 whileHover={{ scale: 1.1, zIndex: 10 }}
@@ -274,7 +274,7 @@ export default function Linktree() {
                                                     src={album.coverImageSrc}
                                                 />
                                                 <Button
-                                                    className="w-full rounded-b-lg font-normal border-t-2 border-primary"
+                                                    className="w-full bg-foreground-100 rounded-b-lg font-normal border-t-2 border-primary"
                                                     radius="none"
                                                 >
                                                     {album.title}
