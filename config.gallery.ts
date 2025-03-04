@@ -31,10 +31,10 @@ const gallery: { albums: Album[] } = {
       ],
     },
     {
-      title: "hello kittyuwu",
+      title: "hello kitty",
       route: "hello-kitty",
       coverImageSrc:
-        "/assets/kuromi/kuromi-album.png",
+        "/assets/hello-kitty/hello-kitty-album.png",
       posts: [
         {
           title: "1",

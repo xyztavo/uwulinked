@@ -35,7 +35,7 @@ export default function Album() {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                My Albums
+                My Albums ❤️
               </ModalHeader>
               <ModalBody className="flex flex-row items-center justify-center flex-wrap">
                 {gallery.albums.map((album) => (
