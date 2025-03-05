@@ -30,7 +30,7 @@ const config: Config = {
   discordLink: "https://discord.com/users/1342638294961360949",
   youtubeLink: "https://www.youtube.com/@luvvykkj",
   spotifyLink: "https://open.spotify.com/user/vu17cdzwl3nysuaf9w458bivs",
-  footer: "made with ❤️, mari",
+  footer: "made with ❤️, marikitty",
 };
 
 export default config;
