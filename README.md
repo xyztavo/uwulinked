@@ -30,7 +30,7 @@ const config: Config = {
   avatarImgSrc: "/assets/profile.png",
   buttons: [
     {
-      title: "💌 ୨♡୧ playlist da mari ✧ ˚.",
+      title: "💌 ୨♡୧ mari's playlist ✧ ˚.",
       link: "https://www.youtube.com/playlist?list=PLggpdHXCYzD8_yF2yIh2qIS83RF5SnKd0",
     },
     {
@@ -46,7 +46,7 @@ const config: Config = {
   discordLink: "https://discord.com/users/1342638294961360949",
   youtubeLink: "https://www.youtube.com/@luvvykkj",
   spotifyLink: "https://open.spotify.com/user/vu17cdzwl3nysuaf9w458bivs",
-  footer: "made with ❤️, mari",
+  footer: "made with 💞, marikitty and ustav",
 };
 ```
 ## screenshots
