@@ -6,6 +6,7 @@
 - supports discord activities through [lanyard](https://github.com/Phineas/lanyard)
 - shows what music you're listening too in spotify
 - dark mode is kuromi theme, light mode is hello kitty theme
+- i made with gf, [live example](https://marikitty.vercel.app)
 ## usage
 - go to [config file](https://raw.githubusercontent.com/xyztavo/ulinked/refs/heads/main/config.ts)
 > in the config file, you can enable blog and gallery features, aswell the lanyard feat
