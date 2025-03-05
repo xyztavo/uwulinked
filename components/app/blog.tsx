@@ -10,7 +10,7 @@ export default function Blog() {
             {config.options.blog && <div className="flex flex-col items-center justify-center gap-4">
                 {blog.posts != null && blog.posts.map((post, i) => (
                     <div className="shadow-custom rounded-lg">
-                        <Card className="max-w-[300px]" key={i}>
+                        <Card className="max-w-[300px] bg-background box-border border-medium border-foreground-200" key={i}>
                             <CardHeader className="justify-between">
                                 <div className="flex gap-5">
                                     <Avatar

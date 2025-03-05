@@ -1,4 +1,4 @@
-import { Didact_Gothic, Inter as FontSans } from "next/font/google";
+import { Didact_Gothic,  Inter as FontSans } from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],

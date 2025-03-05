@@ -14,23 +14,23 @@ const config: Config = {
   avatarImgSrc: "/assets/profile.png",
   buttons: [
     {
-      title: "My minecraft skinseed",
-      link: "https://www.google.com/search?q=skinseed+ayashii",
+      title: "💌 ୨♡୧ playlist da mari ✧ ˚.",
+      link: "https://www.youtube.com/playlist?list=PLggpdHXCYzD8_yF2yIh2qIS83RF5SnKd0",
     },
     {
-      title: "lorem ipsum",
-      link: "https://www.google.com/search?q=skinseed+ayashii",
+      title: "爱 minecraft textures packs  ˖ ࣪⊹ ִֶָ 🩰",
+      link: "https://www.youtube.com/playlist?list=PLggpdHXCYzD9keHB7A2z8PsTKSzkd6YXV",
     },
     {
-      title: "dolor sit amet",
-      link: "https://www.google.com/search?q=skinseed+ayashii",
+      title: "୨☆୧ makeup playlist 𝅄 🪞 𝅄 ੭",
+      link: "https://www.youtube.com/playlist?list=PLggpdHXCYzD9bd1yjVUnMSjSipdoHbfeA",
     },
   ],
   instagramLink: "https://www.instagram.com/mariana.0lv/",
   discordLink: "https://discord.com/users/1342638294961360949",
   youtubeLink: "https://www.youtube.com/@luvvykkj",
   spotifyLink: "https://open.spotify.com/user/vu17cdzwl3nysuaf9w458bivs",
-  footer: "made with ❤️, marikitty",
+  footer: "made with ❤️, mari",
 };
 
 export default config;

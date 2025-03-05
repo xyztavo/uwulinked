@@ -4,9 +4,9 @@ const blog: Blog = {
     title: "About me",
     posts: [
         {
-            title: "Hewwo, im mari :3",
-            description: "Praesent hendrerit neque tincidunt nibh fringilla, id porttitor nisi bibendum. Maecenas in sem sed mauris venenatis molestie. Aenean tempus lobortis est quis ullamcorper. Pellentesque placerat convallis tristique. Maecenas dui erat, pellentesque vel pellentesque sit amet, sagittis et purus. Mauris rutrum tortor imperdiet, mattis erat ac, lacinia nibh. Fusce tempus mauris sed sem interdum facilisis. Curabitur pellentesque rutrum nulla non bibendum. ",
-            footer: "❤️❤️❤️❤️",
+            title: "Hewwo, my name is Mariana 🎀 ",
+            description: `.˖๋౨ৎ I love creating some minecraft skins and i absolutely love listening to music ♬⋆.˚˖`,
+            footer: "💞🇧🇷🎀",
         },
     ],
 }
