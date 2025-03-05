@@ -6,11 +6,17 @@ import blog from "@/config.blog"
 export default function Blog() {
     return (
         <div className="flex flex-col gap-2">
-            {blog.title && config.options.blog && <h2 className="text-2xl text-default-900 text-center">{blog.title}</h2>}
+            {blog.title && config.options.blog && (
+                <div className="shadow-custom rounded-md z-10">
+                    <div className="text-2xl bg-white dark:bg-background border-medium rounded-md border-foreground-200 p-2 text-center">
+                        {blog.title}
+                    </div>
+                </div>
+            )}
             {config.options.blog && <div className="flex flex-col items-center justify-center gap-4">
                 {blog.posts != null && blog.posts.map((post, i) => (
-                    <div className="shadow-custom rounded-lg">
-                        <Card className="max-w-[300px] bg-background box-border border-medium border-foreground-200" key={i}>
+                    <div className="shadow-custom rounded-md">
+                        <Card className="max-w-[300px] bg-background border-medium rounded-md border-foreground-200" key={i}>
                             <CardHeader className="justify-between">
                                 <div className="flex gap-5">
                                     <Avatar

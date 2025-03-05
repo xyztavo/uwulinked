@@ -49,7 +49,7 @@ const config: Config = {
 };
 ```
 ## screenshots
-<img src="/public/assets/screenshots/ss1.png">
-<img src="/public/assets/screenshots/ss2.png">
-<img src="/public/assets/screenshots/ss3.png">
-<img src="/public/assets/screenshots/ss4.png">
+<img src="./public/assets/screenshots/homedark.png">
+<img src="./public/assets/screenshots/homelight.png">
+<img src="./public/assets/screenshots/albums.png">
+<img src="./public/assets/screenshots/kuromi.png">

@@ -251,9 +251,9 @@ export default function Linktree() {
                             <Camera />
                         </Button>
                     )}
-                    <ThemeSwitch />
+                    <ThemeSwitch className="text-background" />
                 </div>
-                {/* Gallery Albums */}
+                {/* Gallery Albums Modal */}
                 <Modal isOpen={isOpen} onOpenChange={onOpenChange} >
                     <ModalContent >
                         {(onClose) => (
@@ -275,7 +275,7 @@ export default function Linktree() {
                                                 src={album.coverImageSrc}
                                             />
                                             <Button
-                                                className="w-full bg-foreground-100 rounded-b-lg font-normal border-t-2 border-primary"
+                                                className="bg-foreground-100 w-32 text-center overflow-hidden rounded-b-lg font-normal border-t-2 border-primary"
                                                 radius="none"
                                             >
                                                 {album.title}

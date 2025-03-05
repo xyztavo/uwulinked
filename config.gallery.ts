@@ -3,7 +3,7 @@ import { Album } from "./types/config.gallery";
 const gallery: { albums: Album[] } = {
   albums: [
     {
-      title: "kuromi <3",
+      title: "kuromi 🦇",
       route: "kuromi",
       coverImageSrc:
         "/assets/kuromi/kuromi-album.png",
@@ -31,7 +31,7 @@ const gallery: { albums: Album[] } = {
       ],
     },
     {
-      title: "hello kitty",
+      title: "hello kitty 🎀",
       route: "hello-kitty",
       coverImageSrc:
         "/assets/hello-kitty/hello-kitty-album.png",
