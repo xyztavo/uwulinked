@@ -90,76 +90,80 @@ export default function Album() {
         {results.map((album, i) => (
           <div
             key={i}
-            className="flex flex-row flex-wrap items-center justify-center gap-8"
+            className="flex flex-col items-center justify-center gap-4"
           >
-        <h1 className="text-2xl">{album.title}</h1>
-            {album.posts.map((image, i) => {
-              const {
-                isOpen: isImageOpen,
-                onOpen: onImageOpen,
-                onOpenChange: onImageOpenChange,
-                // eslint-disable-next-line react-hooks/rules-of-hooks
-              } = useDisclosure();
+            <h1 className="text-2xl">{album.title}</h1>
+            <div
+            className="flex flex-row flex-wrap items-center justify-center gap-8"
+            >
+              {album.posts.map((image, i) => {
+                const {
+                  isOpen: isImageOpen,
+                  onOpen: onImageOpen,
+                  onOpenChange: onImageOpenChange,
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                } = useDisclosure();
 
-              return (
-                <motion.div
-                  key={i}
-                  className="flex flex-col items-center justify-center cursor-pointer shadow-custom rounded-lg"
-                  whileHover={{ scale: 1.1 }}
-                  onClick={onImageOpen}
-                >
-                  <Modal
-                    isOpen={isImageOpen}
-                    onOpenChange={onImageOpenChange}
+                return (
+                  <motion.div
+                    key={i}
+                    className="flex flex-col items-center justify-center cursor-pointer shadow-custom rounded-lg"
+                    whileHover={{ scale: 1.1 }}
+                    onClick={onImageOpen}
                   >
-                    <ModalContent className={image.videoSrc ? "scale-100 lg:scale-150" : ""}>
-                      {(onClose) => (
-                        <>
-                          <ModalHeader className="flex flex-col">
-                            {image.title}
-                          </ModalHeader>
-                          <ModalBody className="flex flex-row items-center justify-center flex-wrap">
-                            {image.videoSrc ? (
-                              <Video
-                                autoPlay
-                                accentColor={config.accentColor}
-                                src={image.videoSrc}
-                              />
-                            ) : (
-                              <Image
-                                alt={"image of " + image.title}
-                                src={image.src}
-                                className="object-cover"
-                                width={240}
-                                height={240}
-                                priority
-                              />
-                            )}
-                          </ModalBody>
-                          <ModalFooter>
-                            <Button
-                              className="text-white"
-                              color="primary"
-                              onPress={onClose}
-                            >
-                              Close
-                            </Button>
-                          </ModalFooter>
-                        </>
-                      )}
-                    </ModalContent>
-                  </Modal>
-                  <img alt=""
-                    className="w-52 h-52 rounded-md object-cover" src={image.src} />
-                  <h1 className="mt-[-1.5rem] rounded-md text-white font-bold  w-full text-center">
-                    {image.title}
-                  </h1>
-                  {image.videoSrc && (
-                    <PlayCircle className="absolute w-12 h-12" color="white" />
-                  )}
-                </motion.div>
-              );
-            })}
+                    <Modal
+                      isOpen={isImageOpen}
+                      onOpenChange={onImageOpenChange}
+                    >
+                      <ModalContent className={image.videoSrc ? "scale-100 lg:scale-150" : ""}>
+                        {(onClose) => (
+                          <>
+                            <ModalHeader className="flex flex-col">
+                              {image.title}
+                            </ModalHeader>
+                            <ModalBody className="flex flex-row items-center justify-center flex-wrap">
+                              {image.videoSrc ? (
+                                <Video
+                                  autoPlay
+                                  accentColor={config.accentColor}
+                                  src={image.videoSrc}
+                                />
+                              ) : (
+                                <Image
+                                  alt={"image of " + image.title}
+                                  src={image.src}
+                                  className="object-cover"
+                                  width={240}
+                                  height={240}
+                                  priority
+                                />
+                              )}
+                            </ModalBody>
+                            <ModalFooter>
+                              <Button
+                                className="text-white"
+                                color="primary"
+                                onPress={onClose}
+                              >
+                                Close
+                              </Button>
+                            </ModalFooter>
+                          </>
+                        )}
+                      </ModalContent>
+                    </Modal>
+                    <img alt=""
+                      className="w-52 h-52 rounded-md object-cover" src={image.src} />
+                    <h1 className="mt-[-1.5rem] rounded-md text-white font-bold  w-full text-center">
+                      {image.title}
+                    </h1>
+                    {image.videoSrc && (
+                      <PlayCircle className="absolute w-12 h-12" color="white" />
+                    )}
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         ))}
       </div>
